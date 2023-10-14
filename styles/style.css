@@ -1,0 +1,137 @@
+/* Add this CSS in a separate stylesheet or within a <style> tag in your HTML */
+
+/* Body styles */
+body {
+    background-color: #26292d;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  /* Container styles */
+  .container {
+    background-color: rgba(53, 154, 200, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(3, 65, 71, 0.3);
+  }
+  
+  /* Header styles */
+  h4 {
+    color: #b2152d;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Logo styles */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Login form styles */
+  h3 {
+    color: #e3b095;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  label {
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .form-control::placeholder {
+    color: #cccccc;
+  }
+  
+  /* Login button styles */
+  .btn-primary {
+    background-color: #66b3d7;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ffffff;
+
+      color: #121212;
+    
+  }
+  
+  /* Register link styles */
+  #linkRegister {
+    color: #a3d1ad;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  #linkRegister:hover {
+    text-decoration: underline;
+    color: #f2ebec;
+  }
+
+
+
+
+  /*Modal*/
+
+  /* Dark-themed Modal */
+.modal {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  
+  .modal-header {
+    background-color: #121212;
+    border-bottom: 1px solid #333;
+  }
+  
+  .modal-title {
+    color: #fff;
+  }
+  
+  .modal-close {
+    color: #fff; 
+  }
+  
+  .modal-body {
+    background-color: #1e1e1e;
+  }
+  
+  .modal-main-div {
+    color: #fff;
+  }
+  
+  .modal-footer {
+    background-color: #121212;
+    border-top: 1px solid #333;
+  }
+  
+  .modal-footer button {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .modal-footer button:hover {
+    background-color: #121212;
+  }
+
+

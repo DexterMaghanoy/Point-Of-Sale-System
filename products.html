@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/ae360af17e.js"
+            crossorigin="anonymous"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous">
+
+
+
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <script src="js/products.js" defer></script>
+        <!-- <script src="js/product_update.js" defer></script> -->
+
+        <link rel="stylesheet" href="./styles/dashboard.css">
+        <script src="./styles/dashboard.js" defer></script>
+
+        <script src="./js/using.js" defer></script>
+
+        <title>Products</title>
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                <div class="h-100">
+                    
+                    <!-- Sidebar Navigation -->
+                    <br>
+                    <ul class="sidebar-nav">
+                      <li  class="sidebar-item">
+                          <a  href="./profile.html" class="sidebar-link">
+                                <i  class="fa-solid fa-user"  id="user"></i>
+                          </a>
+                      </li>
+                        <li class="sidebar-item">
+                            <a href="./dashboard.html" class="sidebar-link">
+                                <i class="fa-solid fa-house"></i>
+                                 Dashboard
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="./products.html" class="sidebar-link">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Products
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="./category.html" class="sidebar-link">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                                 Category
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="sales.html" class="sidebar-link">
+                                <i class="fa-solid fa-chart-simple"></i>
+                               Sales
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                          <a href="customer.html" class="sidebar-link">
+                            <i class="fa-solid fa-users"></i>
+                            Customers
+                          </a>
+                      </li>
+
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#pages"
+                                aria-expanded="false" aria-controls="pages">
+                                <i class="fa-regular fa-file-lines pe-2"></i>
+                              Others
+                            </a>
+                            <ul id="pages"
+                                class="sidebar-dropdown list-unstyled collapse"
+                                data-bs-parent="#sidebar">
+                                <li class="sidebar-item">
+                                  <a href="./profile.html" class="sidebar-link">User Profile</a>
+                                </li>
+                           
+                            </ul>
+                        </li>
+                 
+                  
+
+
+                        
+                        <li id="LogOut" style="margin-top: 10%;" class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    Log Out
+                                </a>
+                            </li>
+                </div>
+            </aside>
+            
+
+
+            
+            <!-- Main Component -->
+            <div class="main">
+                <nav class="navbar navbar-expand px-3 border-bottom">
+                    <!-- Button for sidebar toggle -->
+                    <button class="btn" type="button" data-bs-theme="dark">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+                <main class="content px-3 py-2">
+                    <div class="container-fluid">
+                        <div class="mb-3">
+
+                            <!-- Start Code ----------------------------------------------------------------------------------------------------------------------------------------->
+
+                                     <div class="main-title mt-3">
+                                    <h2>Products</h2>
+                                  </div>    
+
+                                    <div class="container">
+                                      <div class="row justify-content">
+                                        <div class="col-sm">
+                                          <div class="row justify-content-center mt-3">
+                                            <div class="col-sm text-center">
+                                              <h1>Add Product</h1>
+                                            </div>
+                                          </div>
+                                          <br>
+                                          <div class="row justify-content-center">
+                                            <div class="col-sm-6" >
+                                              <label for="prodname"><h6>Product Name:</h6></label>
+                                              <input type="text" id="prodname" class="form-control form-control-sm" placeholder="Enter Product Name" >
+                                              <br>
+
+                                              <label for=""><h6>Choose Product Category: </h6></label>
+                                              <select  style="background-color: rgb(212, 211, 211);" name="" id="prodcategory" >
+                                              <option style="text-align: center;" value="">------ Select Category ------</option>
+                                    
+                                              </select> 
+
+                                              <label for="prodprice" class="mt-2"><h6>Product Price:</h6></label>
+                                              <input type="text" id="prodprice" class="form-control form-control-sm" placeholder="Enter Product Price" >
+                                              <br>
+                                              <label for="prodquantity"><h6>Quantity: </h6></label>
+                                              <input type="text" id="prodquantity" class="form-control form-control-sm" placeholder="Enter Quantity" >
+                                              <br>
+
+                                           <br>
+                                            </div>  
+                                          </div>
+                                          <div class="row justify-content-center mb-5">
+                                            <div class="col-sm-6 text-center">
+                                              <button type="button" class="btn btn-primary btn-sm mt-2 w-50" id="btnAddProduct">Add Product</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    
+                                        <div class="col-sm">
+                                    
+                                          <div class="row justify-content-center mt-3">
+                                            <div class="col-sm text-center">
+                                              <h1>Product Items</h1>
+                                            </div>
+                                          </div>
+                                          <div  class="row justify-content-justify">
+                                          <div class="col-sm" >
+                                            <div id="blankTable"></div>
+                                            <div style="text-align: center;" id="paginationDiv"></div>
+                                          </div>  
+                                        </div> 
+                                        </div>
+                                        
+                                      </div>
+                                    
+                                 
+                                    
+                                    
+                                    
+                                    <div class="modal fade" id="blankModal" role="modal">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header text-white" style="background-color:#3f413f">
+                                            <h5 class="modal-title" id="blankModalTitle">Blank Modal Title</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <div class="modal-body" id="blankModalBody">
+                                            <div class="row">
+                                              <div class="col col-sm-12" id="blankModalMainDiv">Main Div</div>
+                                            </div>
+                                            <div class="row">
+                                              <div class="col col-sm-12" id="blankModalMainDiv2">Main Div 2</div>
+                                            </div>
+                                            <div class="row">
+                                              <div class="col col-sm-12" id="blankModalFooterDiv">Footer Div</div>
+                                            </div>
+                                          </div>
+                                          <div class="modal-footer" id="blankModalFooterDiv2">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                    </div>
+
+                                <!-- End Code  ----------------------------------------------------------------------------------------------------------------------------------------->
+
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+    
+</body>
+
+    </html>
